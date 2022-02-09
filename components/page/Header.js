@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <>
             <Head>
-                <title>Gregory Sanchez</title>
+                <title>Elliot Flemmons</title>
                 <link rel="icon" href="/favicon.ico" />
 
                 {/*// <!-- Chrome, Firefox OS and Opera -->*/}
