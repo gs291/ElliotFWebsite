@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import {useRouter} from 'next/router';
+import {useSelector} from 'react-redux';
 import {styled} from '@mui/material/styles';
 import {Link as MUILink} from '@mui/material';
 
+import {getMobile} from '../../lib/redux/selectors';
 import {globalOptions} from '../../lib/utils/emotionStyled';
 
 
@@ -25,20 +27,20 @@ const HoverLink = styled('div')`
 const MLink = styled(MUILink, globalOptions)`
   transition: 0.3s;
   height: 100px;
-  color: ${props => props.theme.palette.text.primary};
+  ${props => props['data-m'] ? 'width: 100%;' : ''}
+  color: ${props => props.theme.palette.textOpposite.primary};
   border-bottom: 5px solid ${props => props['data-a'] ? 'black' : 'transparent'};
 `;
 
 const A = styled('div', globalOptions)`
   display: inline-block;
   min-width: 100px;
-  font-size: ${props => props['data-m'] ? 2 : 1.5 }em;
   line-height: 100px;
 `;
 
 export default function NavLink({path, children, active=true, ...rest}) {
-
     const router = useRouter();
+    const mobile = useSelector(getMobile);
 
     return (
         <>
@@ -46,6 +48,7 @@ export default function NavLink({path, children, active=true, ...rest}) {
                 <MLink
                     underline="none"
                     {...(active ? {"data-a": router.pathname === path} : null)}
+                    data-m={mobile}
                     {...rest}
                 >
                     <HoverLink >
