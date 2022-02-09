@@ -14,7 +14,7 @@ export default function Nav({}){
 
     return (
         <>
-            <HeaderBar position="relative" color="transparent">
+            <HeaderBar position="relative" color="transparent" component="div">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <NavLink path="/" active={false}>
