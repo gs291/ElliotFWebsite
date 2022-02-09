@@ -4,7 +4,7 @@ import Nav from './Nav';
 import HeaderBackground from './HeaderBackground';
 
 
-const HeaderContainer = styled('div')`
+const HeaderContainer = styled('header')`
   position: relative;
   height: 25vh;
   width: 100%;
