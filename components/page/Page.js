@@ -6,6 +6,7 @@ import {useMediaQuery, useTheme} from '@mui/material';
 
 import Header from './Header';
 import Footer from '../footer/Footer';
+import PageHeader from '../header/Header';
 import {updateMobile} from '../../lib/redux/actions';
 
 const PageContainer = styled('div')`
@@ -68,6 +69,7 @@ export default function Page(props) {
             <Global styles={globals} />
             <Header />
             <PageContainer>
+                <PageHeader />
                 <Main>
                     {props.children}
                 </Main>
