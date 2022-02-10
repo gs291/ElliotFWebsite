@@ -6,13 +6,22 @@ const FooterContainer = styled('footer')`
   flex-direction: row;
   gap: 0 20px;
   height: 100px;
+  
+  text-align: center;
 `;
 
 export default function Footer({ className }) {
 
     return (
         <FooterContainer className={className}>
-            yoooooooooooooooo
+            <div>
+                <div>
+                    This is the footer. It can contain socials or anything.
+                </div>
+                <div>
+                    (I will also be tagging myself in this so people can easily find me too)
+                </div>
+            </div>
         </FooterContainer>
     );
 }
