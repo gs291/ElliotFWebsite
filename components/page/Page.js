@@ -37,7 +37,7 @@ export default function Page(props) {
 
     const dispatch = useDispatch();
 
-    const screen = useMediaQuery('(max-width: 960px)');
+    const screen = useMediaQuery('(max-width: 900px)');
 
     useEffect(() => {
         dispatch(updateMobile(screen));
