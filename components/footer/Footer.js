@@ -12,7 +12,7 @@ export default function Footer({ className }) {
 
     return (
         <FooterContainer className={className}>
-            yoooooooooooooooo
+            This is the footer. It can contain socials or anything.
         </FooterContainer>
     );
 }

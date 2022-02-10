@@ -46,7 +46,7 @@ export default function NavDrawer({drawerOpen, closeDrawer}) {
                 <DrawerContainer data-dm={darkMode}>
                     {siteLinks.map(({text, ...rest}) => (
                         <DrawerLink active={false} onClick={closeDrawer} {...rest} >
-                            <Typography variant="h6">
+                            <Typography variant="h4">
                                 {text}
                             </Typography>
                         </DrawerLink>
