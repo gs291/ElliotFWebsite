@@ -7,6 +7,7 @@ import {useMediaQuery, useTheme} from '@mui/material';
 import Header from './Header';
 import Footer from '../footer/Footer';
 import PageHeader from '../header/Header';
+import {ga4SendPageView} from '../../lib/utils/ga4';
 import {updateMobile} from '../../lib/redux/actions';
 
 const PageContainer = styled('div')`
@@ -42,6 +43,10 @@ export default function Page(props) {
     useEffect(() => {
         dispatch(updateMobile(screen));
     }, [screen]);
+
+    useEffect(() => {
+        ga4SendPageView();
+    }, []);
 
     const globals = css`
       ::-webkit-scrollbar {
