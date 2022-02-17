@@ -25,7 +25,7 @@ const Menu = styled(Button, globalOptions)`
   color: ${props => props.theme.palette.textOpposite.primary};
 `;
 
-export default function Nav({drawerOpen, toggleDrawer}){
+export default function Nav({drawerOpen, closeDrawer, toggleDrawer}){
     const mobile = useSelector(getMobile);
 
     return (
@@ -33,7 +33,7 @@ export default function Nav({drawerOpen, toggleDrawer}){
             <HeaderBar position="relative" color="transparent" component="div">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        <NavLink path="/" active={false}>
+                        <NavLink path="/" active={false} onClick={closeDrawer}>
                             <Typography variant="h3">
                                 EF
                             </Typography>

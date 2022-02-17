@@ -27,7 +27,7 @@ export default function Header() {
     return (
         <>
             <HeaderContainer>
-                <Nav drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
+                <Nav drawerOpen={drawerOpen} closeDrawer={handleDrawerClose} toggleDrawer={toggleDrawer} />
                 <HeaderBackground />
             </HeaderContainer>
             {mobile && (
